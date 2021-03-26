@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <title>htmlForm</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha484-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-secondary">
+
+    <div class="container">
+        <div class="mt-5 justify-content-center align-items-center">
+            <div class="card p-4">
+                    <!--HEADER-->
+                <div class="card-header border-0 mb-0 p-0"><h1><strong>Payment form example</strong></h1></div>
+                <hr>
+                    <!--BODY-->
+                <div class="card body border-0">
+                    <form class="needs-validation" novalidate>
+
+                    <!--linea1-->
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputcardnumber">Card #</label>
+                                <input type="number" class="form-control" id="inputCardNumber" placeholder="XXXXXXXXXXXX" maxlength="12" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+                               <div class="invalid-tooltip"><p>Please provide a valid Credit Card Number with 14 numbers without space.</p></div>
+                
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="inputcvc">CVC #</label>
+                                <input type="number" class="form-control" id="inputCVC" placeholder="0000" maxlength="4" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"required>
+                                <div class="invalid-tooltip"> <p>Please provide the CVC four numbers.</p> </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="inputamount">Amount</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fas fa-dollar-sign"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inputAmount" placeholder="Amount" required>
+                                    <div class="invalid-tooltip"><p>Please confirm the amount before submitting the payment form.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                    <!--linea2-->
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputFirstName">First Name</label>
+                                <input type="text" class="form-control" id="inputFirstName" required>
+                                <div class="invalid-tooltip"><p>Please provide your First Name.</p></div>
+                            </div>
+                            
+                            <div class="form-group col-md-6">
+                                <label for="inputLastName">Last Name</label>
+                                <input type="text" class="form-control" id="inputLastName" required>
+                                <div class="invalid-tooltip"><p>Please provide your Last Name.</p></div>
+                            </div>
+                        </div>
+
+                <!--linea3-->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity" required>
+                            <div class="invalid-tooltip"><p>Please provide your City.</p></div>
+                        </div>
+        
+                        <div class="form-group col-md-3">
+                            <label for="inputState">State</label>
+                            <select id="inputState" class="form-control" required>
+                                <option  value=" "> </input>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <div class="invalid-tooltip"><p>Please pick up your State.</p></div>
+                            </select>
+                        </div>
+        
+                        <div class="form-group col-md-3">
+                            <label for="inputZip">Zip</label>
+                            <input type="number" class="form-control" id="inputZip" maxlength="5" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+                            <div class="invalid-tooltip"><p>Please provide your Zip Code.</p></div>
+                        </div>
+                    </div>
+
+                <!--linea4-->
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputCreditCard">We accept:</label>
+                            <div class=" checkbox form-row bg-secondary text-white p-2 m-auto rounded justify-content-between" style="font-size: 25px">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="card1" value="option1" required>
+                                    <label class="form-check-label" for="inlineRadio1"><i class="fab fa-cc-mastercard"></i></label>
+                                    
+                                   
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="cad2" value="option2" required>
+                                    <label class="form-check-label" for="inlineRadio2"><i class="fab fa-cc-visa"></i></label>
+                                   
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="card3" value="option3" required>
+                                    <label class="form-check-label" for="inlineRadio3"><i class="fab fa-cc-amex"></i></label>
+                                </div>
+                            </div>  
+                        </div>
+                        
+                        <div class="form-group col-3"></div>
+                        
+                        <div class="form-group col-md-6">
+                            <label for="inputMessage">Message</label>
+                            <textarea class="form-control" id="inputMessage" rows="3" required></textarea>
+                            <small id="messageHelp" class="form-text text-muted">Add any note here.</small>
+                            <div class="invalid-tooltip"><p>Provide a description.</p></div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <!--Botones-->
+                    <div class="float-right">
+                        <buttom class="btn btn-secondary" type="reset">Cancel</buttom>
+                        <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">Send</button>
+                    </div>
+
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content p-3" style="background-color: #ffcccc;">
+                                <span>Some fields are missing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div> 
+        </div> 
+    </div>
+    
+    
+    <script>
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</body>
